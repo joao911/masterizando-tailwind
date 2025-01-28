@@ -10,6 +10,10 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  ...compat.extends(
+    "@rocketseat/eslint-config/next",
+    "plugin:react/recommended"
+  ),
   ...compat.extends("next/core-web-vitals", "next/typescript"),
 ];
 
