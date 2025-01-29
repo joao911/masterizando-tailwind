@@ -4,7 +4,7 @@ import { Logo } from './components/Logo';
 import { MainNavigation } from './components/MainNavigation';
 import { UsedSpaceWidget } from './components/UsedSpaceWidget';
 import { Profile } from './components/Profile';
-import { InputControl, InputPrefix, InputRoot } from './components/Input';
+import { InputControl, InputPrefix, InputRoot } from '../Input';
 import { Search } from 'lucide-react';
 
 
