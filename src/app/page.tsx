@@ -1,12 +1,14 @@
 import { SettingsTabs } from './components/SettingsTabs'
 import * as Input from './components/Input'
-import { Mail } from 'lucide-react'
+import { Bold, Italic, Link, List, ListOrdered, Mail } from 'lucide-react'
 import { Root } from './components/form/fileInput/Root'
 import { ImagePreview } from './components/form/fileInput/ImagePreview'
 import { Trigger } from './components/form/fileInput/Trigger'
 import { Control } from './components/form/fileInput/Control'
 import { FileList } from './components/form/fileInput/FileList'
 import { SelectComponent } from './components/form/SelectComponent'
+import { SelectItem } from './components/form/SelectComponent/SelectItem'
+import { TextArea } from './components/form/TextArea'
 
 export default function Home() {
   return (
@@ -115,26 +117,62 @@ export default function Home() {
             >
               Country
             </label>
-            <SelectComponent />
+            <SelectComponent placeholder="Select a country">
+              <SelectItem text="Brazil" value="br" />
+              <SelectItem text="Portugal" value="pt" />
+              <SelectItem text="USA" value="us" />
+              <SelectItem text="Germany" value="de" />
+            </SelectComponent>
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">
             <label htmlFor="zone" className="text-sm font-medium text-zinc-700">
               Time zone
             </label>
-            <div className=" "></div>
+            <SelectComponent placeholder="Select a time zone">
+              <SelectItem text="GMT-3" value="gmt-3" />
+              <SelectItem text="GMT-2" value="gmt-2" />
+              <SelectItem text="GMT-1" value="gmt-1" />
+            </SelectComponent>
           </div>
           <div className="grid grid-cols-form gap-3 pt-5">
-            <label
-              htmlFor="photo"
-              className="text-sm font-medium text-zinc-700"
-            >
+            <label htmlFor="bio" className="text-sm font-medium text-zinc-700">
               Bio
               <span className="mt-0.5 block text-sm font-normal text-zinc-500">
                 Write a short introduction
               </span>
             </label>
-            <div className=" "></div>
+            <div className="space-y-3">
+              <div className="grid grid-cols-2 gap-3">
+                <SelectComponent placeholder="Normal" defaultValue="normal">
+                  <SelectItem text="Normal" value="normal" />
+                </SelectComponent>
+                <div className="flex items-center gap-1">
+                  <button type="button" className="hove:bg-zinc-50 rounded p-2">
+                    <Bold className="h-4 w-4 text-zinc-500" strokeWidth={4} />
+                  </button>
+                  <button type="button" className="hove:bg-zinc-50 rounded p-2">
+                    <Italic className="h-4 w-4 text-zinc-500" strokeWidth={4} />
+                  </button>
+                  <button type="button" className="hove:bg-zinc-50 rounded p-2">
+                    <Link className="h-4 w-4 text-zinc-500" strokeWidth={4} />
+                  </button>
+                  <button type="button" className="hove:bg-zinc-50 rounded p-2">
+                    <List className="h-4 w-4 text-zinc-500" strokeWidth={4} />
+                  </button>
+                  <button type="button" className="hove:bg-zinc-50 rounded p-2">
+                    <ListOrdered
+                      className="h-4 w-4 text-zinc-500"
+                      strokeWidth={4}
+                    />
+                  </button>
+                </div>
+              </div>
+              <TextArea
+                id="bio"
+                defaultValue="I'm a product designer based in Melbourne, Australia. I specialise in interactive prototyping and user-friendly interfaces. Let's work together!"
+              />
+            </div>
           </div>
 
           <div className="grid grid-cols-form gap-3 pt-5">
