@@ -2,18 +2,17 @@
 
 import React from 'react'
 import { useFileInput } from '../Root'
-import { div } from 'framer-motion/client'
 import { map } from 'lodash'
 import { Trash2, UploadCloud } from 'lucide-react'
 import { formatBytes } from '@/ultils/format-bytes'
-
-// import { Container } from './styles';
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 export const FileList: React.FC = () => {
   const { files } = useFileInput()
+  const [parent] = useAutoAnimate()
 
   return (
-    <div className="mt-4 space-x-3">
+    <div className="mt-4 space-x-3" ref={parent}>
       {map(files, (file) => (
         <div
           key={file.name}
