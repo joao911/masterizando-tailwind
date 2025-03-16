@@ -1,5 +1,6 @@
 import React from 'react'
 import { LogOut } from 'lucide-react'
+import { Button } from '@/app/components/Button'
 
 export const Profile: React.FC = () => {
   return (
@@ -17,9 +18,9 @@ export const Profile: React.FC = () => {
           joaopaulolacerda911@gmail.com
         </span>
       </div>
-      <button type="button" className="hove:bg-zinc-50 ml-auto rounded p-2">
+      <Button variant="ghost" type="button">
         <LogOut className="h-5 w-5 text-zinc-500" />
-      </button>
+      </Button>
     </div>
   )
 }
