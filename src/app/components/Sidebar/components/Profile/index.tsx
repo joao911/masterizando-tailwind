@@ -11,10 +11,10 @@ export const Profile: React.FC = () => {
         className="h-10 w-10 rounded-full"
       />
       <div className="flex flex-col">
-        <span className="text-sm font-semibold text-zinc-700">
+        <span className="text-sm font-semibold text-zinc-700 dark:text-zinc-100">
           João Paulo Duarte
         </span>
-        <span className="max-w-40 truncate text-sm text-zinc-700">
+        <span className="max-w-40 truncate text-sm text-zinc-700 dark:text-zinc-400">
           joaopaulolacerda911@gmail.com
         </span>
       </div>

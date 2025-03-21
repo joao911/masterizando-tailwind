@@ -1,15 +1,14 @@
-import * as React from "react"
+import * as React from 'react'
 
 export function Logo() {
   return (
-    <strong className="flex items-center gap-2 text-xl font-semibold text-zinc-900 mx-1">
+    <strong className="mx-1 flex items-center gap-2 text-xl font-semibold text-zinc-900 dark:text-zinc-100">
       <svg
         width={38}
         height={38}
         viewBox="0 0 38 38"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-
       >
         <g filter="url(#filter0_dd_25851_307)">
           <g clipPath="url(#clip0_25851_307)">
@@ -210,5 +209,3 @@ export function Logo() {
     </strong>
   )
 }
-
-
